@@ -1,3 +1,5 @@
+const { msgIdNotFound } = require('../constants/constant');
+const { msgDuplicateEmail } = require('../constants/constant');
 
 function ErrorHandler(error, req, res, next) {
   let { statusCode = 500, message } = error;
@@ -7,11 +9,11 @@ function ErrorHandler(error, req, res, next) {
   }
   if (error.name === 'CastError') {
     statusCode = 400;
-    message = 'id is not found';
+    message = msgIdNotFound;
   }
   if (error.code === 11000) {
     statusCode = 409;
-    message = 'This email is already used';
+    message = msgDuplicateEmail;
   }
   res.status(statusCode).send({
     message: statusCode === 500 ? 'Произошла ошибка' : message,

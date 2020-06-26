@@ -1,13 +1,15 @@
 const Article = require('../models/article');
 const NotFoundError = require('../errors/NotFoundError');
 const AccessDeniedError = require('../errors/AccessDeniedError');
-
+const { msgDelArt } = require('../constants/constant');
+const { msgArtNull } = require('../constants/constant');
+const { msgAccessDenied } = require('../constants/constant');
 
 module.exports.getArticle = async (req, res, next) => {
   try {
     const userId = req.user._id;
     const userGetArticle = await Article.find({ owner: userId })
-      .orFail(() => new NotFoundError('Article list is empty'));
+      .orFail(() => new NotFoundError(msgArtNull));
     return res.send(userGetArticle);
   } catch (err) {
     return next(err);
@@ -17,9 +19,9 @@ module.exports.deleteArticle = async (req, res, next) => {
   const { articleId } = req.params;
   try {
     const articleDeleteCard = await Article.findById(articleId).populate('owner')
-      .orFail(() => new NotFoundError('The Article was already deleted Or Article is empty'));
+      .orFail(() => new NotFoundError(msgDelArt));
     if (!articleDeleteCard.owner.equals(req.user._id)) {
-      throw new AccessDeniedError('Access denied');
+      throw new AccessDeniedError(msgAccessDenied);
     }
     await articleDeleteCard.remove();
     return res.send(articleDeleteCard.delOwner());
