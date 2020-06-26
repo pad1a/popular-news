@@ -1,6 +1,6 @@
 const routes = require('express').Router();
 
-const NotValidUrl = require('../NotValidUrl');
+const NotValidUrl = require('../controllers/NotValidUrl');
 const userRoutes = require('./users');
 const articleRoutes = require('./article');
 const authRoutes = require('./auth');
