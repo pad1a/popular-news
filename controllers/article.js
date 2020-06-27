@@ -37,7 +37,7 @@ module.exports.createArticle = async (req, res, next) => {
     const userCreateArticle = await Article.create({
       keyword, title, text, date, source, link, image, owner: req.user._id,
     });
-    return res.send(userCreateArticle);
+    return res.status(201).send(userCreateArticle);
   } catch (err) {
     return next(err);
   }

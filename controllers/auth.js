@@ -12,7 +12,7 @@ module.exports.createUser = async (req, res, next) => {
     const newUser = await User.create({
       name, email, password: hash,
     });
-    return res.send({
+    return res.status(201).send({
       name: newUser.name, email: newUser.email,
     });
   } catch (err) {
