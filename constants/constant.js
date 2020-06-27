@@ -15,5 +15,5 @@ module.exports = {
   msgUserNotFound,
   msgNeedAuth,
   msgIdNotFound,
-  msgDuplicateEmail
+  msgDuplicateEmail,
 };
