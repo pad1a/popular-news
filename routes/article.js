@@ -9,14 +9,13 @@ const {
 routes.get('/articles', auth, getArticle);
 routes.post('/articles', celebrate({
   body: Joi.object().keys({
-    name: Joi.string().required().min(2).max(30),
-    link: Joi.string().required().custom(validatorURL),
-    image: Joi.string().required().custom(validatorURL),
     keyword: Joi.string().required(),
     title: Joi.string().required(),
     text: Joi.string().required(),
     date: Joi.string().required(),
     source: Joi.string().required(),
+    link: Joi.string().required().custom(validatorURL),
+    image: Joi.string().required().custom(validatorURL),
   }),
 }), auth, createArticle);
 routes.delete('/articles/:articleId', celebrate({
@@ -24,6 +23,5 @@ routes.delete('/articles/:articleId', celebrate({
     articleId: Joi.string().alphanum().length(24),
   }),
 }), auth, deleteArticle);
-
 
 module.exports = routes;
