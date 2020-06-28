@@ -1,4 +1,3 @@
-
 const User = require('../models/users');
 const NotFoundError = require('../errors/NotFoundError');
 const { msgUserNotFound } = require('../constants/constant');

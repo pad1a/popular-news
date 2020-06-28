@@ -1,4 +1,3 @@
-
 const msgDelArt = 'The Article was already deleted Or Article is empty';
 const msgArtNull = 'Article list is empty';
 const msgNotFound = 'Запрашиваемый ресурс не найден';
