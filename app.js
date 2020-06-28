@@ -30,9 +30,9 @@ app.use(limiter);
 app.use(helmet());
 app.use(requestLogger);
 
-app.use('/', routes);
+app.use(routes);
 app.use(errorLogger);
-app.use('/', ErrorHandler);
+app.use(ErrorHandler);
 
 app.use(errors());
 app.use(errorLogger);
