@@ -26,17 +26,16 @@ mongoose.connect(DATABASE_URL, {
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(requestLogger);
 app.use(limiter);
 app.use(helmet());
+app.use(requestLogger);
 
 app.use('/', routes);
+app.use(errorLogger);
 app.use('/', ErrorHandler);
 
 app.use(errors());
 app.use(errorLogger);
-
 
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT}`);
