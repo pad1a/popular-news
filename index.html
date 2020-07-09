@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
-    <link rel="stylesheet" href="styles/index.55ea38b77112a295dff1.css" type="text/css">
+    <link rel="stylesheet" href="styles/index.a6e8e5cced00754a71dc.css" type="text/css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
 
 </head>
@@ -105,6 +105,66 @@
               </div>
           </div>
       </main>
+      <div class="popup popup_login">
+          <div class="popup__content">
+              <img src="./src/images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <h3 class="popup__title">Вход</h3>
+              <form class="popup__form" name="signin" id="signin">
+                  <div class="input-container">
+                      <span class="popup__text">Email</span>
+                      <input id="emailLogin" required type="text" name="email" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите почту">
+                      <span id="error-email" class="error-message"></span>
+                  </div>
+                  <div class="input-container">
+                      <span class="popup__text">Пароль</span>
+                      <input id="passwordLogin" required type="password" name="password" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите пароль">
+                      <span id="error-password" class="error-message"></span>
+                  </div>
+                  <button id="submitSignIn" type="submit" class="button popup__button popup__button_is_disabled">Войти</button>
+                  <div class="input-container">
+                  <span class="popup__change">или</span><a href="#" class="popup__text">Зарегестрироваться</a>
+                  </div>
+              </form>
+          </div>
+      </div>
+      <div class="popup popup_register">
+          <div class="popup__content">
+              <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <h3 class="popup__title">Регистрация</h3>
+              <form class="popup__form" name="signup" id="signup">
+                  <div class="input-container">
+                      <span class="popup__text">Email</span>
+                      <input id="email" required type="text" name="email" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите почту">
+                      <span id="error-newEmail" class="error-message"></span>
+                  </div>
+                  <div class="input-container">
+                      <span class="popup__text">Пароль</span>
+                      <input id="password" required type="password" name="password" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите пароль">
+                      <span id="error-newPassword" class="error-message"></span>
+                  </div>
+                  <div class="input-container input-container_is_clear-bottom">
+                      <span class="popup__text">Имя</span>
+                      <input id="userName" required type="text" name="userName" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите своё имя">
+                      <span id="error-newName" class="error-message"></span>
+                  </div>
+                  <span id="error-newUser" class="error-message error-message_type_server"></span>
+                  <button id="submitSignUp" type="submit" class="button popup__button popup__button_is_disabled">Зарегестрироваться</button>
+                  <div class="input-container">
+                      <span class="popup__change">или</span><a href="#" class="popup__text">Войти</a>
+                  </div>
+              </form>
+          </div>
+      </div>
+
+
+      <div class="popup popup_success popup_is_opened">
+          <div class="popup__content popup__content_size_small">
+              <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <h3 class="popup__title popup__title_size_small">Пользователь успешно зарегестрирован!</h3>
+              <a href="#" class="popup__text">Выполнить вход</a>
+          </div>
+      </div>
+
       <footer class="footer root__footer">
           <span class="footer__author">&copy; 2020 Supersite, Powered by News API</span>
           <ul class="footer__links">
@@ -130,11 +190,11 @@
         <form class="popup__form" name="editProfile" id="editProfile">
           <div class="input-container">
             <input id="newUserName" required type="text" name="newName" class="popup__input popup__input_type_new-name"  minlength="2" maxlength="32" placeholder="Имя">
-            <span id="error-newUserName" class="error-message"></span>
+            <span id="error-message-newUserName" class="error-message-message"></span>
           </div>
           <div class="input-container">
             <input id="aboutMe" required type="text" name="aboutMe" class="popup__input popup__input_type_about-me"  minlength="2" maxlength="32" placeholder="О себе">
-            <span id="error-aboutMe" class="error-message"></span>
+            <span id="error-message-aboutMe" class="error-message-message"></span>
           </div>
           <button id="submit" type="submit" class="button popup__btn-save ">Сохранить</button>
         </form>
@@ -149,11 +209,11 @@
         <form class="popup__form" name="new" id="new">
           <div class="input-container">
             <input required type="text" name="name" id="newPlace" class="popup__input popup__input_type_name"  minlength="2" maxlength="32" placeholder="Название">
-            <span id="error-newPlace" class="error-message"></span>
+            <span id="error-message-newPlace" class="error-message-message"></span>
           </div>
           <div class="input-container">
             <input required type="url" name="newlink" id="newlink" class="popup__input popup__input_type_link-url"  placeholder="Ссылка на картинку">
-            <span id="error-newlink" class="error-message"></span>
+            <span id="error-message-newlink" class="error-message-message"></span>
           </div>
             <button id="submitPlace" type="submit" class="button popup__button popup__button_is-disabled">+</button>
         </form>

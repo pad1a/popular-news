@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My news</title>
-    <link rel="stylesheet" href="styles/myNews.55ea38b77112a295dff1.css" type="text/css">
+    <link rel="stylesheet" href="styles/myNews.6a04176f7537f6ede1d0.css" type="text/css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
 
 </head>
@@ -39,10 +39,12 @@
                     <div class="card__photo">
                         <img src="./images/card1.png" alt="Природа.Nature" class="card__icon">
                         <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
-                            <button class="button card__button card__button_status_marked"></button>
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
                         </div>
-
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
+                        </div>
                     </div>
                     <span class="card__data">2 августа, 2019</span>
                     <h3 class="card__title">Национальное достояние – парки</h3>
@@ -54,8 +56,11 @@
                     <div class="card__photo">
                         <img src="./images/card2.png" alt="Тайга.Taiga" class="card__icon">
                         <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
-                            <button class="button card__button"></button>
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
                         </div>
                     </div>
                     <span class="card__data">2 августа, 2019</span>
@@ -68,8 +73,44 @@
                     <div class="card__photo">
                         <img src="./images/card3.png" alt="Леса.Forest" class="card__icon">
                         <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled ">Войдите, чтобы сохранять статьи</button>
-                            <button class="button card__button"></button>
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Тайга</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                    <span class="card__copyright">Риа</span>
+                </div>
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="./images/card2.png" alt="Тайга.Taiga" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                    <span class="card__copyright">Медуза</span>
+                </div>
+
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="./images/card3.png" alt="Леса.Forest" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Фотографии</button>
                         </div>
                     </div>
                     <span class="card__data">2 августа, 2019</span>
@@ -106,11 +147,11 @@
         <form class="popup__form" name="editProfile" id="editProfile">
           <div class="input-container">
             <input id="newUserName" required type="text" name="newName" class="popup__input popup__input_type_new-name"  minlength="2" maxlength="32" placeholder="Имя">
-            <span id="error-newUserName" class="error-message"></span>
+            <span id="error-message-newUserName" class="error-message-message"></span>
           </div>
           <div class="input-container">
             <input id="aboutMe" required type="text" name="aboutMe" class="popup__input popup__input_type_about-me"  minlength="2" maxlength="32" placeholder="О себе">
-            <span id="error-aboutMe" class="error-message"></span>
+            <span id="error-message-aboutMe" class="error-message-message"></span>
           </div>
           <button id="submit" type="submit" class="button popup__btn-save ">Сохранить</button>
         </form>
@@ -125,11 +166,11 @@
         <form class="popup__form" name="new" id="new">
           <div class="input-container">
             <input required type="text" name="name" id="newPlace" class="popup__input popup__input_type_name"  minlength="2" maxlength="32" placeholder="Название">
-            <span id="error-newPlace" class="error-message"></span>
+            <span id="error-message-newPlace" class="error-message-message"></span>
           </div>
           <div class="input-container">
             <input required type="url" name="newlink" id="newlink" class="popup__input popup__input_type_link-url"  placeholder="Ссылка на картинку">
-            <span id="error-newlink" class="error-message"></span>
+            <span id="error-message-newlink" class="error-message-message"></span>
           </div>
             <button id="submitPlace" type="submit" class="button popup__button popup__button_is-disabled">+</button>
         </form>
