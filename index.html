@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
-    <link rel="stylesheet" href="styles/index.a6e8e5cced00754a71dc.css" type="text/css">
+    <link rel="stylesheet" href="styles/index.25339fe1b905f333cf49.css" type="text/css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
-
 </head>
+<!--При открытии формы на боди будет ставится, body-style_status_OvHidden, чтобы не было прокрутки вниз -->
+<body class="body-style">
   <div class="root">
       <header class="header root__section root__section_theme_main">
           <div class="nav__section">
               <p class="header__logo">NewsExplorer</p>
+              <button class="header__button"></button>
               <nav class="nav">
-                  <ul class="navigation">
-                      <li class="navigation__li"><a href="index.html" class="navigation__link navigation__link_colour_white navigation__link_status_active-white" target="_blank">Главная</a></li>
-                      <li class="navigation__li navigation__li_status_unlogin"><a href="myNews.html" class="navigation__link navigation__link_colour_white" target="_blank">Сохранненые статьи</a></li>
-                      <li class="navigation__li navigation__li_status_unlogin">
-                          <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="./images/logout.png" alt="Выход.Logout"></button>
-                      </li>
-                      <li class="navigation__li">
-                          <button class="button navigation__button">Авторизоваться</button>
-                      </li>
-                  </ul>
-              </nav>
+                    <ul class="navigation">
+                        <li class="navigation__li"><a href="index.html" class="navigation__link navigation__link_colour_white navigation__link_status_active-white" target="_blank">Главная</a></li>
+                        <li class="navigation__li navigation__li_status_unlogin"><a href="myNews.html" class="navigation__link navigation__link_colour_white" target="_blank">Сохранненые статьи</a></li>
+                        <li class="navigation__li navigation__li_status_unlogin">
+                            <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="./images/logout.png" alt="Выход.Logout"></button>
+                        </li>
+                        <li class="navigation__li">
+                            <button class="button navigation__button">Авторизоваться</button>
+                        </li>
+                    </ul>
+                </nav>
           </div>
           <section class="news">
               <h1 class="news__title">Что в мире творится?</h1>
@@ -96,7 +98,11 @@
           </div>
           <div class="author root__author">
               <div class="author__image">
+                <picture>
+                  <source srcset="./images/photo-tabl.png" media="(min-width:701px) and (max-width:1024px)">
+                  <source srcset="./images/photo-mob.png" media="(min-width: 320px) and (max-width:700px)">
                   <img src="./images/photo.png" alt="Фото автора. Author photo" class="photo">
+                </picture>
               </div>
               <div class="about author__about">
                   <h2 class="about__title">Об авторе</h2>
@@ -105,9 +111,9 @@
               </div>
           </div>
       </main>
-      <div class="popup popup_login">
+      <div class="popup popup__login">
           <div class="popup__content">
-              <img src="./src/images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <img src=" ./images/close.svg" alt="Close.Закрыть" class="popup__close">
               <h3 class="popup__title">Вход</h3>
               <form class="popup__form" name="signin" id="signin">
                   <div class="input-container">
@@ -127,7 +133,7 @@
               </form>
           </div>
       </div>
-      <div class="popup popup_register">
+      <div class="popup popup__register">
           <div class="popup__content">
               <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
               <h3 class="popup__title">Регистрация</h3>
@@ -155,87 +161,41 @@
               </form>
           </div>
       </div>
-
-
-      <div class="popup popup_success popup_is_opened">
+      <div class="popup popup__success">
           <div class="popup__content popup__content_size_small">
               <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
               <h3 class="popup__title popup__title_size_small">Пользователь успешно зарегестрирован!</h3>
-              <a href="#" class="popup__text">Выполнить вход</a>
+              <a href="#" class="popup__text popup__text_size_medium">Выполнить вход</a>
           </div>
       </div>
-
+    <div class="popup popup__phone-menu">
+      <div class="phone-menu">
+        <div class="phone-menu__header">
+          <p class="phone-menu__logo">NewsExplorer</p>
+          <img src="./images/close.svg" alt="Close.Закрыть" class="phone-menu__exit">
+        </div>
+      <nav class="phone-menu__links">
+        <a href="./index.html" class="phone-menu__link">Главная</a>
+        <a href="./myNews.html" class="phone-menu__link phone-menu__link_status_unlogin">Сохранённые статьи</a>
+      </nav>
+      <button class="button phone-menu__button">Авторизоваться</button>
+      <button class="button phone-menu__button phone-menu__button_status_unlogin">Грета
+        <img class="phone-menu__icon-logout" src="./images/logout.png">
+      </button>
+      </div>
+    </div>
       <footer class="footer root__footer">
           <span class="footer__author">&copy; 2020 Supersite, Powered by News API</span>
-          <ul class="footer__links">
-              <li><a href="index.html" class="footer__link" target="_blank">Главная</a></li>
-              <li><a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a></li>
+          <ul class="end footer__links">
+              <li class="end__link"><a href="index.html" class="footer__link footer__link_mobile_small" target="_blank">Главная</a></li>
+              <li class="end__link"><a href="https://praktikum.yandex.ru/" class="footer__link footer__link_mobile_small" target="_blank">Яндекс.Практикум</a></li>
           </ul>
-          <ul class="footer__icons">
-              <li><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="./images/Git.svg" class="footer__icon" alt="GitHub. Гитхаб"></a></li>
-              <li><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="./images/Facebook.svg" class="footer__icon" alt="Facebook. Фейсбук"></a></li>
+          <ul class="logo footer__icons">
+              <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="./images/Git.svg" class="footer__icon" alt="GitHub. Гитхаб"></a></li>
+              <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="./images/Facebook.svg" class="footer__icon" alt="Facebook. Фейсбук"></a></li>
           </ul>
       </footer>
-
-
-
-
-
   </div>
-<!--
-    <div class="popup popup_profile">
-      <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_profile">
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form" name="editProfile" id="editProfile">
-          <div class="input-container">
-            <input id="newUserName" required type="text" name="newName" class="popup__input popup__input_type_new-name"  minlength="2" maxlength="32" placeholder="Имя">
-            <span id="error-message-newUserName" class="error-message-message"></span>
-          </div>
-          <div class="input-container">
-            <input id="aboutMe" required type="text" name="aboutMe" class="popup__input popup__input_type_about-me"  minlength="2" maxlength="32" placeholder="О себе">
-            <span id="error-message-aboutMe" class="error-message-message"></span>
-          </div>
-          <button id="submit" type="submit" class="button popup__btn-save ">Сохранить</button>
-        </form>
-      </div>
-    </div>
-    -->
-<!--
-    <div class="popup popup_place">
-      <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_place">
-        <h3 class="popup__title">Новое место</h3>
-        <form class="popup__form" name="new" id="new">
-          <div class="input-container">
-            <input required type="text" name="name" id="newPlace" class="popup__input popup__input_type_name"  minlength="2" maxlength="32" placeholder="Название">
-            <span id="error-message-newPlace" class="error-message-message"></span>
-          </div>
-          <div class="input-container">
-            <input required type="url" name="newlink" id="newlink" class="popup__input popup__input_type_link-url"  placeholder="Ссылка на картинку">
-            <span id="error-message-newlink" class="error-message-message"></span>
-          </div>
-            <button id="submitPlace" type="submit" class="button popup__button popup__button_is-disabled">+</button>
-        </form>
-      </div>
-    </div>
-    -->
-<!--
-    <div class="popup popup_image">
-      <div class="popup__container">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_image">
-      </div>
-    </div>
-      </div>
--->
-
-
-
-<!--
-  <scripts src="./scripts/scripts.js"></scripts>
--->
-
-  <!-- классы -> константы + initialsCards + инициализация классов-->
 <script src="index.83c8bca1a5ad16e5cf99.js"></script>
 </body>
 </html>
