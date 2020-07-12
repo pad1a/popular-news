@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
-    <link rel="icon" href="<%= require('./images/favicon.png').default %>">
+    <link rel="stylesheet" href="styles/index.391af5e8ce6a29233c3f.css">
+    <link rel="icon" href="./images/favicon.png">
 </head>
 <!--При открытии формы на боди будет ставится, body-style_status_OvHidden, чтобы не было прокрутки вниз, пример Instagramm-->
 <body class="body-style">
@@ -21,7 +21,7 @@
                         <li class="navigation__li"><a href="index.html" class="navigation__link navigation__link_colour_white navigation__link_status_active-white" target="_blank">Главная</a></li>
                         <li class="navigation__li navigation__li_status_unlogin"><a href="myNews.html" class="navigation__link navigation__link_colour_white" target="_blank">Сохранненые статьи</a></li>
                         <li class="navigation__li navigation__li_status_unlogin">
-                            <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="<%= require('./images/logout.png').default %>" alt="Выход. Logout."></button>
+                            <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="./images/logout.png" alt="Выход. Logout."></button>
                         </li>
                         <li class="navigation__li">
                             <button class="button navigation__button">Авторизоваться</button>
@@ -44,7 +44,7 @@
               <div class="result__card">
                   <div class="card">
                       <div class="card__photo">
-                          <img src="<%= require('./images/card1.png').default %>" alt="Природа. Nature" class="card__icon">
+                          <img src="./images/card1.png" alt="Природа. Nature" class="card__icon">
                         <!-- card__button_status_marked сохраняет статью -->
                           <div class="card__button-block">
                               <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
@@ -60,7 +60,7 @@
 
                   <div class="card">
                       <div class="card__photo">
-                          <img src="<%= require('./images/card2.png').default %>" alt="Тайга.Taiga" class="card__icon">
+                          <img src="./images/card2.png" alt="Тайга.Taiga" class="card__icon">
                           <div class="card__button-block">
                             <!-- card__button_status_disabled скрывает кнопку -->
                               <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
@@ -75,7 +75,7 @@
 
                   <div class="card">
                       <div class="card__photo">
-                          <img src="<%= require('./images/card3.png').default %>" alt="Леса.Forest" class="card__icon">
+                          <img src="./images/card3.png" alt="Леса.Forest" class="card__icon">
                           <div class="card__button-block">
                               <button class="button card__button-login card__button_status_disabled ">Войдите, чтобы сохранять статьи</button>
                               <button class="button card__button"></button>
@@ -91,7 +91,7 @@
           </div>
         <!-- root__empty_status_disabled скрывает блок ПЛохого поиска -->
           <div class="empty root__empty root__empty_status_disabled">
-              <img class="empty__logo" src="<%= require('./images/not-found_v1.png').default %>" alt="Not Found. Ничего не найдено">
+              <img class="empty__logo" src="./images/not-found_v1.png" alt="Not Found. Ничего не найдено">
               <h2 class="empty__title">Ничего не найдено</h2>
               <p class="empty__text">К сожалению по вашему запросу ничего не найдено.</p>
           </div>
@@ -103,9 +103,9 @@
           <div class="author root__author">
               <div class="author__image">
                 <picture>
-                  <source srcset="<%= require('./images/photo-tabl.png').default %>" media="(min-width:701px) and (max-width:1024px)">
-                  <source srcset="<%= require('./images/photo-mob.png').default %>" media="(min-width: 320px) and (max-width:700px)">
-                  <img src="<%= require('./images/photo.png').default %>" class="photo" alt="Фото автора. Author photo" >
+                  <source srcset="./images/photo-tabl.png" media="(min-width:701px) and (max-width:1024px)">
+                  <source srcset="./images/photo-mob.png" media="(min-width: 320px) and (max-width:700px)">
+                  <img src="./images/photo.png" class="photo" alt="Фото автора. Author photo" >
                 </picture>
               </div>
               <div class="about author__about">
@@ -118,7 +118,7 @@
     <!-- popup_is_opened открытие всех форм -->
       <div class="popup popup__login">
           <div class="popup__content">
-              <img src=" <%= require('./images/close.svg').default %>" alt="Close. Закрыть." class="popup__close">
+              <img src=" ./images/close.svg" alt="Close. Закрыть." class="popup__close">
               <h3 class="popup__title">Вход</h3>
               <form class="popup__form" name="signin" id="signin">
                   <div class="input-container">
@@ -140,7 +140,7 @@
       </div>
       <div class="popup popup__register">
           <div class="popup__content">
-              <img src="<%= require('./images/close.svg').default %>" alt="Close. Закрыть." class="popup__close">
+              <img src="./images/close.svg" alt="Close. Закрыть." class="popup__close">
               <h3 class="popup__title">Регистрация</h3>
               <form class="popup__form" name="signup" id="signup">
                   <div class="input-container">
@@ -168,7 +168,7 @@
       </div>
       <div class="popup popup__success">
           <div class="popup__content popup__content_size_small">
-              <img src="<%= require('./images/close.svg').default %>" alt="Close.Закрыть" class="popup__close">
+              <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
               <h3 class="popup__title popup__title_size_small">Пользователь успешно зарегестрирован!</h3>
               <a href="#" class="popup__text popup__text_size_medium">Выполнить вход</a>
           </div>
@@ -177,7 +177,7 @@
       <div class="phone-menu">
         <div class="phone-menu__header">
           <p class="phone-menu__logo">NewsExplorer</p>
-          <img src="<%= require('./images/close.svg').default %>" alt="Close.Закрыть" class="phone-menu__exit">
+          <img src="./images/close.svg" alt="Close.Закрыть" class="phone-menu__exit">
         </div>
       <nav class="phone-menu__links">
         <a href="./index.html" class="phone-menu__link">Главная</a>
@@ -185,7 +185,7 @@
       </nav>
       <button class="button phone-menu__button">Авторизоваться</button>
       <button class="button phone-menu__button phone-menu__button_status_unlogin">Грета
-        <img class="phone-menu__icon-logout" src="<%= require('./images/logout.png').default %>" alt="Выход.Logout." >
+        <img class="phone-menu__icon-logout" alt="Выход. Logout." src="./images/logout.png" >
       </button>
       </div>
     </div>
@@ -196,11 +196,11 @@
               <li class="end__link"><a href="https://praktikum.yandex.ru/" class="footer__link footer__link_mobile_small" target="_blank">Яндекс.Практикум</a></li>
           </ul>
           <ul class="logo footer__icons">
-              <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="<%= require('./images/Git.svg').default %>" class="footer__icon" alt="GitHub logo. Гитхаб лого."></a></li>
-              <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="<%= require('./images/Facebook.svg').default %>" class="footer__icon" alt="Facebook logo. Фейсбук лого."></a></li>
+              <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="./images/Git.svg" class="footer__icon" alt="GitHub logo. Гитхаб лого."></a></li>
+              <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="./images/Facebook.svg" class="footer__icon" alt="Facebook logo. Фейсбук лого."></a></li>
           </ul>
       </footer>
   </div>
-<script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+<script src="index.83c8bca1a5ad16e5cf99.js"></script>
 </body>
 </html>
