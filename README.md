@@ -12,6 +12,8 @@
 ###### git clone https://github.com/VitalyBibik/popular-news.git
 ###### git pull origin develop-html
 ###### npm -i
+###### npm run dev - Режим разработки
+###### npm build - Режиб сборки проекта для прода
 ## Need TODO:
 ##### Начать писать JS;
 ##### Сделать красивые hover, анимации на свой вкус;
