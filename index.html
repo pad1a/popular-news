@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
-    <link rel="stylesheet" href="styles/index.25339fe1b905f333cf49.css" type="text/css">
+    <link rel="stylesheet" href="styles/index.0fda33f343ef29bdd3d8.css" type="text/css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
 </head>
 <!--При открытии формы на боди будет ставится, body-style_status_OvHidden, чтобы не было прокрутки вниз -->
@@ -17,6 +17,7 @@
               <button class="header__button"></button>
               <nav class="nav">
                     <ul class="navigation">
+                      <!-- navigation__li_status_unlogin скрывает кнопку -->
                         <li class="navigation__li"><a href="index.html" class="navigation__link navigation__link_colour_white navigation__link_status_active-white" target="_blank">Главная</a></li>
                         <li class="navigation__li navigation__li_status_unlogin"><a href="myNews.html" class="navigation__link navigation__link_colour_white" target="_blank">Сохранненые статьи</a></li>
                         <li class="navigation__li navigation__li_status_unlogin">
@@ -44,6 +45,7 @@
                   <div class="card">
                       <div class="card__photo">
                           <img src="./images/card1.png" alt="Природа.Nature" class="card__icon">
+                        <!-- card__button_status_marked сохраняет статью -->
                           <div class="card__button-block">
                               <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
                               <button class="button card__button card__button_status_marked"></button>
@@ -60,6 +62,7 @@
                       <div class="card__photo">
                           <img src="./images/card2.png" alt="Тайга.Taiga" class="card__icon">
                           <div class="card__button-block">
+                            <!-- card__button_status_disabled скрывает кнопку -->
                               <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
                               <button class="button card__button"></button>
                           </div>
@@ -86,12 +89,13 @@
               </div>
               <button class="button result__button">Показать еще</button>
           </div>
+        <!-- root__empty_status_disabled скрывает блок ПЛохого поиска -->
           <div class="empty root__empty root__empty_status_disabled">
               <img class="empty__logo" alt="Sad smile. Грустный смайл" src="./images/not-found_v1.png">
               <h2 class="empty__title">Ничего не найдено</h2>
               <p class="empty__text">К сожалению по вашему запросу ничего не найдено.</p>
           </div>
-
+        <!-- root__empty_status_disabled скрывает блок поиска -->
           <div class="find root__find root__find_status_disabled">
               <div class="find__loader"></div>
               <p class="find__text">Идет поиск новостей...</p>
@@ -111,6 +115,7 @@
               </div>
           </div>
       </main>
+    <!-- popup_is_opened открытие всех форм -->
       <div class="popup popup__login">
           <div class="popup__content">
               <img src=" ./images/close.svg" alt="Close.Закрыть" class="popup__close">
@@ -118,12 +123,12 @@
               <form class="popup__form" name="signin" id="signin">
                   <div class="input-container">
                       <span class="popup__text">Email</span>
-                      <input id="emailLogin" required type="text" name="email" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите почту">
+                      <input id="emailLogin" required type="email" name="email" class="popup__input" pattern="\b^[a-z0-9_]+([-\.][a-z0-9_-]+)*@[a-z]+(?:\.[a-z]+)?\b" placeholder="Введите почту">
                       <span id="error-email" class="error-message"></span>
                   </div>
                   <div class="input-container">
                       <span class="popup__text">Пароль</span>
-                      <input id="passwordLogin" required type="password" name="password" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите пароль">
+                      <input id="passwordLogin" required type="password" name="password" class="popup__input"  minlength="8" maxlength="32" placeholder="Введите пароль">
                       <span id="error-password" class="error-message"></span>
                   </div>
                   <button id="submitSignIn" type="submit" class="button popup__button popup__button_is_disabled">Войти</button>
@@ -140,17 +145,17 @@
               <form class="popup__form" name="signup" id="signup">
                   <div class="input-container">
                       <span class="popup__text">Email</span>
-                      <input id="email" required type="text" name="email" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите почту">
+                      <input id="email" required type="email" name="email" class="popup__input" pattern="\b^[a-z0-9_]+([-\.][a-z0-9_-]+)*@[a-z]+(?:\.[a-z]+)?\b" placeholder="Введите почту">
                       <span id="error-newEmail" class="error-message"></span>
                   </div>
                   <div class="input-container">
                       <span class="popup__text">Пароль</span>
-                      <input id="password" required type="password" name="password" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите пароль">
+                      <input id="password" required type="password" name="password" class="popup__input"  minlength="8" maxlength="32" placeholder="Введите пароль">
                       <span id="error-newPassword" class="error-message"></span>
                   </div>
                   <div class="input-container input-container_is_clear-bottom">
                       <span class="popup__text">Имя</span>
-                      <input id="userName" required type="text" name="userName" class="popup__input"  minlength="2" maxlength="32" placeholder="Введите своё имя">
+                      <input id="userName" required type="text" name="userName" class="popup__input" pattern="^[А-ЯЁ]{1}[а-яё]+(-([А-ЯЁ]{1}[а-яё]+))?$"  minlength="2" maxlength="20" placeholder="Введите своё имя">
                       <span id="error-newName" class="error-message"></span>
                   </div>
                   <span id="error-newUser" class="error-message error-message_type_server"></span>
