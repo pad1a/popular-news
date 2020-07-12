@@ -10,6 +10,7 @@
 ## Запуск:
 ##### Для запуска проекта введите следующие команды;
 ###### git clone https://github.com/VitalyBibik/popular-news.git
+###### git pull origin develop-html
 ###### npm -i
 ## Need TODO:
 ##### Начать писать JS;
