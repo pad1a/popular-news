@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
-    <link rel="stylesheet" href="styles/index.31a1020a31427df7e76a.css" type="text/css">
-    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/index.391af5e8ce6a29233c3f.css">
+    <link rel="icon" href="./images/favicon.png">
 </head>
 <!--При открытии формы на боди будет ставится, body-style_status_OvHidden, чтобы не было прокрутки вниз -->
 <body class="body-style">
@@ -21,7 +21,7 @@
                         <li class="navigation__li"><a href="index.html" class="navigation__link navigation__link_colour_white navigation__link_status_active-white" target="_blank">Главная</a></li>
                         <li class="navigation__li navigation__li_status_unlogin"><a href="myNews.html" class="navigation__link navigation__link_colour_white" target="_blank">Сохранненые статьи</a></li>
                         <li class="navigation__li navigation__li_status_unlogin">
-                            <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="./images/logout.png" alt="Выход.Logout"></button>
+                            <button class="button navigation__button">Грета <img class="navigation__logout-icon" src="./images/logout.png" alt="Выход. Logout."></button>
                         </li>
                         <li class="navigation__li">
                             <button class="button navigation__button">Авторизоваться</button>
@@ -33,7 +33,7 @@
               <h1 class="news__title">Что в мире творится?</h1>
               <p class="news__text">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
               <form class="search header__search" name="search">
-                  <input type="text" placeholder="Введите тему новости" class="search__input">
+                  <input type="text" required minlength="4" maxlength="32"  placeholder="Введите тему новости" class="search__input">
                   <button class="button search__button">Искать</button>
               </form>
           </section>
@@ -44,7 +44,7 @@
               <div class="result__card">
                   <div class="card">
                       <div class="card__photo">
-                          <img src="./images/card1.png" alt="Природа.Nature" class="card__icon">
+                          <img src="./images/card1.png" alt="Природа. Nature" class="card__icon">
                         <!-- card__button_status_marked сохраняет статью -->
                           <div class="card__button-block">
                               <button class="button card__button-login card__button_status_disabled">Войдите, чтобы сохранять статьи</button>
@@ -91,7 +91,7 @@
           </div>
         <!-- root__empty_status_disabled скрывает блок ПЛохого поиска -->
           <div class="empty root__empty root__empty_status_disabled">
-              <img class="empty__logo" alt="Sad smile. Грустный смайл" src="./images/not-found_v1.png">
+              <img class="empty__logo" src="./images/not-found_v1.png" alt="Not Found. Ничего не найдено">
               <h2 class="empty__title">Ничего не найдено</h2>
               <p class="empty__text">К сожалению по вашему запросу ничего не найдено.</p>
           </div>
@@ -105,7 +105,7 @@
                 <picture>
                   <source srcset="./images/photo-tabl.png" media="(min-width:701px) and (max-width:1024px)">
                   <source srcset="./images/photo-mob.png" media="(min-width: 320px) and (max-width:700px)">
-                  <img src="./images/photo.png" alt="Фото автора. Author photo" class="photo">
+                  <img src="./images/photo.png" class="photo" alt="Фото автора. Author photo" >
                 </picture>
               </div>
               <div class="about author__about">
@@ -118,7 +118,7 @@
     <!-- popup_is_opened открытие всех форм -->
       <div class="popup popup__login">
           <div class="popup__content">
-              <img src=" ./images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <img src=" ./images/close.svg" alt="Close. Закрыть." class="popup__close">
               <h3 class="popup__title">Вход</h3>
               <form class="popup__form" name="signin" id="signin">
                   <div class="input-container">
@@ -140,7 +140,7 @@
       </div>
       <div class="popup popup__register">
           <div class="popup__content">
-              <img src="./images/close.svg" alt="Close.Закрыть" class="popup__close">
+              <img src="./images/close.svg" alt="Close. Закрыть." class="popup__close">
               <h3 class="popup__title">Регистрация</h3>
               <form class="popup__form" name="signup" id="signup">
                   <div class="input-container">
@@ -196,8 +196,8 @@
               <li class="end__link"><a href="https://praktikum.yandex.ru/" class="footer__link footer__link_mobile_small" target="_blank">Яндекс.Практикум</a></li>
           </ul>
           <ul class="logo footer__icons">
-              <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="./images/Git.svg" class="footer__icon" alt="GitHub. Гитхаб"></a></li>
-              <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="./images/Facebook.svg" class="footer__icon" alt="Facebook. Фейсбук"></a></li>
+              <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="./images/Git.svg" class="footer__icon" alt="GitHub logo. Гитхаб лого."></a></li>
+              <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="./images/Facebook.svg" class="footer__icon" alt="Facebook logo. Фейсбук лого."></a></li>
           </ul>
       </footer>
   </div>
