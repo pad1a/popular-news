@@ -1,0 +1,14 @@
+.card__button-del {
+    background-image: url("../../../images/rabish.png");
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius:8px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    padding: 0;
+}
+.card__button-del:hover {
+    background-image: url("../../../images/rabish-hover.png");
+}

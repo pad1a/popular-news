@@ -1,0 +1,16 @@
+.card__data {
+    display: block;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #b6bcbf;
+    margin-left: 24px;
+}
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .card__data {
+    margin-left: 16px;
+  }
+}
+
+
+

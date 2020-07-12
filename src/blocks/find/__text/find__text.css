@@ -1,0 +1,8 @@
+.find__text {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    display: flex;
+    justify-content: center;
+}

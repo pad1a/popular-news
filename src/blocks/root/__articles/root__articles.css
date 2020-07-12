@@ -1,0 +1,12 @@
+.root__articles {
+ padding-top: 40px;
+ padding-bottom: 56px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 550px){
+  .root__articles {
+    padding-top: 8px;
+    padding-bottom: 32px;
+  }
+
+}

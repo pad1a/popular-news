@@ -1,0 +1,22 @@
+.root__footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 112px 106px 26px 104px;
+    align-items: baseline;
+}
+
+@media screen and (min-width: 603px) and (max-width: 1024px) {
+  .root__footer {
+    margin: 85px 24px 18px 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width:602px) {
+  .root__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     margin: 100px 16px 20px 16px;
+
+  }
+
+}
