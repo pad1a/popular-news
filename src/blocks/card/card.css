@@ -6,6 +6,8 @@
     display: flex;
     max-height: 100%;
     flex-direction: column;
+    min-width: 224px;
+    margin: 0 auto;
 }
 .card:hover {
   transform: scale(1.1);
