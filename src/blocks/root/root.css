@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif, "Times New Roman";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   max-width: 1440px;
+  background: #fff;
+  text-rendering: optimizeLegibility;
+  margin: 0 auto;
+}
+

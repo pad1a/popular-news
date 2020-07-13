@@ -1,0 +1,33 @@
+.result__card {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 16px;
+    margin: 0 104px;
+    padding-bottom: 64px;
+}
+@media screen and (min-width:581px) and (max-width: 1024px) {
+.result__card {
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 40px;
+  gap: 8px;
+  padding-bottom: 22px;
+  }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1349px) {
+  .result__card {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 40px;
+    gap: 8px;
+    padding-bottom: 22px;
+
+  }
+}
+@media screen and (min-width: 320px) and (max-width:580px) {
+  .result__card {
+    padding:0 16px 15px 16px;
+    margin:0;
+    grid-template-columns: 1fr;
+  }
+
+}

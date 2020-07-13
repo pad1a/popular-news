@@ -1,0 +1,10 @@
+.navigation__link {
+    position: relative;
+    padding-bottom: 25px;
+    text-decoration: none;
+}
+
+.navigation__link:hover {
+    opacity: .7;
+}
+

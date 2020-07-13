@@ -1,0 +1,16 @@
+.navigation {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 400;
+    margin: 30px 104px 0 0;
+}
+@media screen and (min-width: 602px) and (max-width: 1024px) {
+  .navigation {
+    margin: 22px 40px 15px 0;
+  }
+}
+
+

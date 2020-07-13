@@ -1,0 +1,15 @@
+.navigation__li {
+  list-style-type: none;
+  margin-left: 32px;
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  .navigation__li {
+    margin-left: 16px;
+  }
+}
+
+
+
+
+

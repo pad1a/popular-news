@@ -1,0 +1,21 @@
+.root__author {
+    margin-top: 80px;
+    margin-left: 104px;
+    margin-right: 216px;
+}
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .root__author {
+    margin-top: 61px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width:700px) {
+  .result__title {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+}

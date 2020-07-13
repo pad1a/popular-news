@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My news</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.myNews.css %>" type="text/css">
+    <link rel="icon" href="<%= require('./images/favicon.png').default %>" type="image/png">
+
+</head>
+<!--При открытии формы на боди будет ставится, body-style_status_OvHidden, чтобы не было прокрутки вниз -->
+<body class="body-style">
+<div class="root">
+    <header class="header root__section root__section_theme_white">
+        <div class="nav">
+            <p class="header__logo">NewsExplorer</p>
+            <button class="header__button header__button_theme_black"></button>
+            <nav class="nav__section">
+                <ul class="navigation">
+                    <li class="navigation__li"><a href="index.html" class="navigation__link  navigation__link_colour_black" target="_blank">Главная</a></li>
+                    <li class="navigation__li navigation__li_status_login"><a href="myNews.html" class="navigation__link navigation__link_status_active-black  navigation__link_colour_black" target="_blank">Сохранненые статьи</a></li>
+                    <li class="navigation__li navigation__li_status_login">
+                        <button class="button navigation__button navigation__button_theme_black">Грета <img class="navigation__logout-icon" src="<%=require('./images/logout-black.png').default%>" alt="Выход.Logout"></button>
+                    </li>
+                    <li class="navigation__li navigation__li_status_unlogin">
+                        <button class="button navigation__button">Авторизоваться</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="articles root__articles">
+            <p class="articles__info">Сохранённые статьи</p>
+            <h2 class="articles__title">Грета, у вас 5 сохранённых статей</h2>
+            <p class="articles__subtitle">По ключевым словам: <span class="articles__main-word">Природа,</span> <span class="articles__main-word">Тайга</span> и <span class="articles__main-word">2 другим</span></p>
+        </div>
+        <div class="result root__result">
+            <div class="result__card">
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="<%= require('./images/card1.png').default %>" alt="Природа.Nature" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
+                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <span class="card__copyright">Лента.ру</span>
+                </div>
+
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="<%= require('./images/card2.png').default %>" alt="Тайга.Taiga" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                    <span class="card__copyright">Медуза</span>
+                </div>
+
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="<%= require('./images/card3.png').default %>" alt="Леса.Forest" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Тайга</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                    <span class="card__copyright">Риа</span>
+                </div>
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="<%= require('./images/card2.png').default %>" alt="Тайга.Taiga" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Природа</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                    <span class="card__copyright">Медуза</span>
+                </div>
+
+                <div class="card">
+                    <div class="card__photo">
+                        <img src="<%= require('./images/card3.png').default %>" alt="Леса.Forest" class="card__icon">
+                        <div class="card__button-block">
+                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
+                            <button class="button card__button-del"></button>
+                        </div>
+                        <div class="card__button-blockWord">
+                            <button class="button card__button-word">Фотографии</button>
+                        </div>
+                    </div>
+                    <span class="card__data">2 августа, 2019</span>
+                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                    <span class="card__copyright">Риа</span>
+                </div>
+            </div>
+        </div>
+    </main>
+  <div class="popup popup__phone">
+    <div class="phone-menu">
+      <div class="phone-menu__header">
+        <p class="phone-menu__logo">NewsExplorer</p>
+        <img src="<%= require('./images/close.svg').default %>" alt="Close.Закрыть" class="phone-menu__exit">
+      </div>
+      <nav class="phone-menu__links">
+        <a href="./index.html" class="phone-menu__link">Главная</a>
+        <a href="./myNews.html" class="phone-menu__link">Сохранённые статьи</a>
+      </nav>
+      <button class="button phone-menu__button">Грета
+        <img class="phone-menu__icon-logout" alt="Выход. Logout." src="<%= require('./images/logout.png').default %>" >
+      </button>
+    </div>
+  </div>
+    <footer class="footer root__footer">
+        <span class="footer__author">&copy; 2020 Supersite, Powered by News API</span>
+        <ul class="end footer__links">
+            <li class="end__link"><a href="index.html" class="footer__link footer__link_mobile_small" target="_blank">Главная</a></li>
+            <li class="end__link"><a href="https://praktikum.yandex.ru/" class="footer__link footer__link_mobile_small" target="_blank">Яндекс.Практикум</a></li>
+        </ul>
+        <ul class="logo footer__icons">
+            <li class="logo__footer"><a href="https://github.com/VitalyBibik" class="footer__link" target="_blank"><img src="<%= require('./images/Git.svg').default %>" class="footer__icon" alt="GitHub. Гитхаб"></a></li>
+            <li class="logo__footer"><a href="https://ru-ru.facebook.com/yandex.praktikum/" class="footer__link" target="_blank"><img src="<%= require('./images/Facebook.svg').default %>" class="footer__icon" alt="Facebook. Фейсбук"></a></li>
+        </ul>
+    </footer>
+</div>
+<script src="<%= htmlWebpackPlugin.files.chunks.myNews.entry %>"></script>
+</body>
+</html>

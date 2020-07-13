@@ -1,0 +1,11 @@
+@media screen and ( min-width: 320px ) and (max-width: 602px) {
+  .header__button_theme_black {
+    display: block;
+    margin-right: 16px;
+    background-image: url("../../../../../images/menu-black.png");
+    width: 24px;
+    height: 24px;
+    border: none;;
+    background-color: transparent;
+  }
+}

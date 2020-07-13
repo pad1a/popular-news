@@ -1,0 +1,16 @@
+.card__button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius:8px;
+    background-repeat: no-repeat;
+    border: none;
+    background-image: url("../../../images/icon-normal.png");
+    background-position: center;
+    padding: 0;
+}
+.card__button:hover {
+    background-image: url("../../../images/icon-hover.png");
+}
+
+
