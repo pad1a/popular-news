@@ -8,6 +8,8 @@
     background-image: url("../../../images/icon-normal.png");
     background-position: center;
     padding: 0;
+    z-index: 2;
+    position: relative;
 }
 .card__button:hover {
     background-image: url("../../../images/icon-hover.png");

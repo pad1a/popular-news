@@ -1,7 +1,0 @@
-@media screen  and (min-width:320px) and (max-width: 550px) {
-  .phone-menu__links {
-    display: flex;
-    flex-direction: column;
-    margin: 16px 16px 22px;
-  }
-}

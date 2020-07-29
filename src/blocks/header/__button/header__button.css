@@ -1,9 +1,11 @@
+
 .header__button {
   display: none;
 }
 
 @media screen and ( min-width: 320px ) and (max-width: 602px) {
   .header__button {
+    z-index: 3;
     display: block;
     margin-right: 16px;
     background-image: url("../../../images/menu.png");

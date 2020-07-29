@@ -7,10 +7,18 @@
     font-weight: 400;
     margin: 30px 104px 0 0;
 }
-@media screen and (min-width: 602px) and (max-width: 1024px) {
+@media screen and (min-width: 603px) and (max-width: 1024px) {
   .navigation {
     margin: 22px 40px 15px 0;
   }
 }
 
 
+@media screen and ( min-width: 320px ) and (max-width: 602px) {
+
+  .navigation_mobile {
+    flex-direction: column;
+    margin: 0;
+  }
+
+}

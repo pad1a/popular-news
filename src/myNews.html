@@ -16,18 +16,18 @@
         <div class="nav">
             <p class="header__logo">NewsExplorer</p>
             <button class="header__button header__button_theme_black"></button>
-            <nav class="nav__section">
+            <div class="nav">
                 <ul class="navigation">
                     <li class="navigation__li"><a href="index.html" class="navigation__link  navigation__link_colour_black" target="_blank">Главная</a></li>
                     <li class="navigation__li navigation__li_status_login"><a href="myNews.html" class="navigation__link navigation__link_status_active-black  navigation__link_colour_black" target="_blank">Сохранненые статьи</a></li>
                     <li class="navigation__li navigation__li_status_login">
-                        <button class="button navigation__button navigation__button_theme_black">Грета <img class="navigation__logout-icon" src="<%=require('./images/logout-black.png').default%>" alt="Выход.Logout"></button>
+                        <button class="button navigation__button navigation__button_theme_black navigation__li_status_needAuth" id="button-auth-second">Грета</button>
                     </li>
                     <li class="navigation__li navigation__li_status_unlogin">
-                        <button class="button navigation__button">Авторизоваться</button>
+                        <button class="button navigation__button navigation__button_theme_black">Авторизоваться</button>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -38,107 +38,10 @@
         </div>
         <div class="result root__result">
             <div class="result__card">
-                <div class="card">
-                    <div class="card__photo">
-                        <img src="<%= require('./images/card1.png').default %>" alt="Природа.Nature" class="card__icon">
-                        <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
-                            <button class="button card__button-del"></button>
-                        </div>
-                        <div class="card__button-blockWord">
-                            <button class="button card__button-word">Природа</button>
-                        </div>
-                    </div>
-                    <span class="card__data">2 августа, 2019</span>
-                    <h3 class="card__title">Национальное достояние – парки</h3>
-                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <span class="card__copyright">Лента.ру</span>
-                </div>
-
-                <div class="card">
-                    <div class="card__photo">
-                        <img src="<%= require('./images/card2.png').default %>" alt="Тайга.Taiga" class="card__icon">
-                        <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
-                            <button class="button card__button-del"></button>
-                        </div>
-                        <div class="card__button-blockWord">
-                            <button class="button card__button-word">Природа</button>
-                        </div>
-                    </div>
-                    <span class="card__data">2 августа, 2019</span>
-                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-                    <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                    <span class="card__copyright">Медуза</span>
-                </div>
-
-                <div class="card">
-                    <div class="card__photo">
-                        <img src="<%= require('./images/card3.png').default %>" alt="Леса.Forest" class="card__icon">
-                        <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
-                            <button class="button card__button-del"></button>
-                        </div>
-                        <div class="card__button-blockWord">
-                            <button class="button card__button-word">Тайга</button>
-                        </div>
-                    </div>
-                    <span class="card__data">2 августа, 2019</span>
-                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                    <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                    <span class="card__copyright">Риа</span>
-                </div>
-                <div class="card">
-                    <div class="card__photo">
-                        <img src="<%= require('./images/card2.png').default %>" alt="Тайга.Taiga" class="card__icon">
-                        <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
-                            <button class="button card__button-del"></button>
-                        </div>
-                        <div class="card__button-blockWord">
-                            <button class="button card__button-word">Природа</button>
-                        </div>
-                    </div>
-                    <span class="card__data">2 августа, 2019</span>
-                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-                    <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                    <span class="card__copyright">Медуза</span>
-                </div>
-
-                <div class="card">
-                    <div class="card__photo">
-                        <img src="<%= require('./images/card3.png').default %>" alt="Леса.Forest" class="card__icon">
-                        <div class="card__button-block">
-                            <button class="button card__button-login card__button_status_disabled card__button-login_fontSize_medium card__button-login_border_small card__button-login_size_small">Убрать из сохранённых</button>
-                            <button class="button card__button-del"></button>
-                        </div>
-                        <div class="card__button-blockWord">
-                            <button class="button card__button-word">Фотографии</button>
-                        </div>
-                    </div>
-                    <span class="card__data">2 августа, 2019</span>
-                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                    <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                    <span class="card__copyright">Риа</span>
-                </div>
             </div>
         </div>
     </main>
-  <div class="popup popup__phone">
-    <div class="phone-menu">
-      <div class="phone-menu__header">
-        <p class="phone-menu__logo">NewsExplorer</p>
-        <img src="<%= require('./images/close.svg').default %>" alt="Close.Закрыть" class="phone-menu__exit">
-      </div>
-      <nav class="phone-menu__links">
-        <a href="./index.html" class="phone-menu__link">Главная</a>
-        <a href="./myNews.html" class="phone-menu__link">Сохранённые статьи</a>
-      </nav>
-      <button class="button phone-menu__button">Грета
-        <img class="phone-menu__icon-logout" src="<%= require('./images/logout.png').default %>" alt="Выход.Logout." >
-      </button>
-    </div>
-  </div>
+
     <footer class="footer root__footer">
         <span class="footer__author">&copy; 2020 Supersite, Powered by News API</span>
         <ul class="end footer__links">

@@ -6,4 +6,16 @@
   .nav__section {
     display: none;
   }
+  .nav__section_mobile {
+    display: block;
+    position: absolute;
+    background: #1A1B22;
+    z-index: 3;
+    height: 286px;
+    top: 56px;
+    width: 100%;
+  }
 }
+
+
+
